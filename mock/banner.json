@@ -1,0 +1,29 @@
+{
+    "code":"0",
+    "message":"成功",
+    "data":{
+        "banner":[
+            {
+                "value":"img/0a0845a93e28b55fe8421488f1a44bd9.jpg",
+                "url":"http://new.zljianjie.com/prod/details/id/52.html"
+            },
+            {
+                "value":"img/81ab78e118f3ae66c24605b895b355ec.jpg",
+                "url":"http://new.zljianjie.com/prod/details/id/97.html"
+            },
+            {
+                "value":"img/f337342315a1b90c2edb27ebe96a4e47.jpg",
+                "url":"http://new.zljianjie.com/prod/details/id/4.html"
+            }
+        ],
+        "info":[
+           "滚动条1滚动条1滚动条1滚动条1滚动条1滚动条1滚动条1",
+           "滚动条2滚动条2滚动条2滚动条2滚动条2滚动条2滚动条2",
+           "滚动条3滚动条3滚动条3滚动条3滚动条3滚动条3滚动条3",
+           "滚动条4滚动条4滚动条4滚动条4滚动条4滚动条4滚动条4",
+           "滚动条5滚动条5滚动条5滚动条5滚动条5滚动条5滚动条5",
+           "滚动条6滚动条6滚动条6滚动条6滚动条6滚动条6滚动条6",
+           "滚动条7滚动条7滚动条7滚动条7滚动条7滚动条7滚动条7"
+        ]
+    }
+}
