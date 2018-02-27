@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://new.zljianjie.com/Loan/indexoth/money/1000.html -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="format-detection" content="telephone=no">
+		<title>贷款大全</title>
+		<script>
+			(function(){
+			    if (typeof(WeixinJSBridge) == "undefined") {
+			        document.addEventListener("WeixinJSBridgeReady", function (e) {
+			            setTimeout(function(){
+			                WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {
+			                });
+			            },0);
+			        });
+			    } else {
+			        setTimeout(function(){
+			            WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {
+			            });
+			        },0);
+			    }
+			})();
+		</script>	
+		<link rel="stylesheet" type="text/css" href="./files/style.css">
+		<script>
+			window.onresize = function(){
+				getscreen();
+			}
+			function getscreen(){
+				var screenWidth = document.documentElement.clientWidth;
+				document.documentElement.style.fontSize = (100/750) * screenWidth + 'px';
+			}
+			getscreen();
+		</script>
+		<style>
+			select{appearance:none;-moz-appearance:none;-webkit-appearance:none;border:none;outline: none;background:transparent;}
+			html{background:#efefef}
+			._show{display: none;}
+			._show ul{display: none;}
+			.g_pop_content_c input{text-align: center;} 
+			.capacity .sort{padding: 0;}
+			.capacity .sort>div span i{position:relative;top:-1px;}
+			.capacity .sort ul.chose4>li.special a{width:100%;height:100%;display: block;}
+			#scroller{ -webkit-transform:translate3d(0,0,0);}
+			.pullUp_zhanwei{
+				display: none;
+				background:#fff;
+				height:40px;
+				line-height:40px;
+				padding:5px 10px;
+				border-bottom:1px solid #ccc;
+				font-size:14px;
+				color:#888;
+				width:100%;
+			}			
+			.pullUp_zhanwei .pullUpIcon_01{
+				display:block; float:left;
+				width:40px; height:40px;
+				background:url(img/pull-icon@2x.png) 0 0 no-repeat;
+				-webkit-background-size:40px 80px;
+				 background-size:40px 80px;
+				-webkit-transition-property:-webkit-transform;
+				-webkit-transition-duration:250ms;
+				background-position:0 100%;
+				-webkit-transform:rotate(0deg) translateZ(0);
+				-webkit-transition-duration:0ms;
+			
+				-webkit-animation-name:loading;
+				-webkit-animation-duration:2s;
+				-webkit-animation-iteration-count:infinite;
+				-webkit-animation-timing-function:linear;	
+			}
+			#pullDown, #pullUp {
+				display: none;
+				background:#fff;
+				height:40px;
+				line-height:40px;
+				padding:5px 10px;
+				border-bottom:1px solid #ccc;
+				font-size:14px;
+				color:#888;
+				position:absolute;
+				bottom:-51px;
+				width:100%;
+			}
+			#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+				display:block; float:left;
+				width:40px; height:40px;
+				background:url(/Public/img/pull-icon@2x.png) 0 0 no-repeat;
+				-webkit-background-size:40px 80px;
+				 background-size:40px 80px;
+				-webkit-transition-property:-webkit-transform;
+				-webkit-transition-duration:250ms;	
+			}
+			#pullDown .pullDownIcon {
+				-webkit-transform:rotate(0deg) translateZ(0);
+			}
+			#pullUp .pullUpIcon  {
+				-webkit-transform:rotate(-180deg) translateZ(0);
+			}
+			
+			#pullDown.flip .pullDownIcon {
+				-webkit-transform:rotate(-180deg) translateZ(0);
+			}
+			
+			#pullUp.flip .pullUpIcon {
+				-webkit-transform:rotate(0deg) translateZ(0);
+			}
+			
+			#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+				background-position:0 100%;
+				-webkit-transform:rotate(0deg) translateZ(0);
+				-webkit-transition-duration:0ms;
+			
+				-webkit-animation-name:loading;
+				-webkit-animation-duration:2s;
+				-webkit-animation-iteration-count:infinite;
+				-webkit-animation-timing-function:linear;
+			}
+			
+			@-webkit-keyframes loading {
+				from { -webkit-transform:rotate(0deg) translateZ(0); }
+				to { -webkit-transform:rotate(360deg) translateZ(0); }
+			}
+			/*.capacity #wrapper {top:114px;}*/
+			.g_load{display: block;}
+			.capacity{display: none;}
+		</style>
+	</head>
+	<body>
+		<div class="capacity" style="display: block;">
+			<div class="sort"> 
+				<div class="option">
+					<span>金额不限<i></i></span>
+				</div>
+				<div class="option">
+					<span>所有贷款类型<i></i></span>
+				</div>
+				<div class="option">
+					<span>默认排序<i></i></span>
+				</div>
+				<div class="option">
+					<span></span>
+				</div>
+				
+				<div class="_show">
+					
+					<ul class="chose1 oth">
+						<div class="cover"></div>
+						<li money="" class="focus">金额不限<i></i></li>
+						<li money="2000以下">2000以下<i></i></li>
+						<li money="2000-5000">2000-5000<i></i></li>
+						<li money="5000-10000">5000-10000<i></i></li>
+						<li money="10000-50000">10000-50000<i></i></li>
+						<li money="50000以上">50000以上<i></i></li>
+					</ul>
+					<ul class="chose2 oth">
+						<div class="cover"></div>
+						<li creditType="0" class="focus">所有贷款类型<i></i></li>
+						<li creditType="1">小额急速贷款<i></i></li>
+						<li creditType="2">工薪贷<i></i></li>
+						<li creditType="3">电商贷<i></i></li>
+						<li creditType="4">芝麻分贷<i></i></li>
+						<li creditType="5">抵押贷款<i></i></li>
+						<li creditType="6">公积金贷款<i></i></li>
+						<li creditType="7">企业贷款<i></i></li>
+					</ul>
+					<ul class="chose3 oth">
+						<div class="cover"></div>
+						<li order="0" class="focus">默认排序<i></i></li>
+						<li order="1">贷款成功率<i></i></li>
+						<li order="2">贷款速度<i></i></li>
+						<li order="3">贷款利率<i></i></li>
+						<li order="4">贷款额度<i></i></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="list_tip">
+				<i></i>
+				申请多个产品，可大幅提高贷款成功率
+			</div>
+		<style>
+			.list_tip{width:100%;height:29px;line-height: 29px;font-size: 12px;color:#999999;background:#f0f0f0;text-align: center;}
+			.list_tip i{display: inline-block;width:16px;height:13px;background:url(img/bell.png) no-repeat;background-size:13px;transform: translateY(1px);}
+		</style>
+			<div id="wrapper">
+				<div id="scroller">
+					<ul class="morelist">
+					</ul>
+					<div class="pullUp_zhanwei" style="display: none;">
+						<span class="pullUpIcon_01"></span>
+						<span class="pullUpLabel_01">加载中...</span>
+					</div>
+					<div id="pullUp" style="display: none;">
+						<span class="pullUpIcon"></span>
+						<span class="pullUpLabel">加载更多...</span>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="g_load" style="display: none;">
+				<div class="img_box">			
+					<img src="./files/load.gif">
+				</div>
+			</div>
+			<footer class="focus2">
+			    <style>
+			        footer>div span {
+			            font-size: 10px;
+			        }
+			    </style>
+			    	<div class="index">
+			            <i></i>
+			            <span>首页</span>
+			        </div>
+			        
+			        <div class="loan focus">
+			            <a href="javascript:;">
+			                <i></i>
+			                <span>贷款大全</span>
+			            </a>
+			        </div>
+			        <div class="user">
+			            <a href="javascript:;" title="userInfo.html">
+			                <i></i>
+			                <span>我的</span>
+			            </a>
+			        </div>
+			</footer>
+		<script type="text/javascript" src="./files/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/iscroll.js"></script>
+		<script type="text/javascript" src="./files/POP_g.js"></script>
+		<script src="js/common.js"></script>
+		
+		<script type="text/javascript" src="js/index.js"></script>
+
+		<script>
+			intelligent.init();
+			//进入"首页"” 页面
+			$(".index").click(function(){
+				window.location.href="index.html"
+			})
+			
+			//进入“我的” 页面
+			$(".user").find("a").click(function(){
+				window.location.href="userinfo.html"
+			});
+		</script>
+	</body>
+</html>

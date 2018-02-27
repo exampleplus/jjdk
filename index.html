@@ -7,17 +7,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <title>简借贷款</title>
-    <script src="简借贷款_files/hm.js"></script>
+    <title>首页</title>
     <script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?a40ae227e0637f895f6dfdee7231a81a";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-	
 (function(){
     if (typeof(WeixinJSBridge) == "undefined") {
         document.addEventListener("WeixinJSBridgeReady", function (e) {
@@ -35,8 +26,8 @@
 })();
 </script>	
     <link rel="stylesheet" href="css/information.css" />
-    <link rel="stylesheet" type="text/css" href="简借贷款_files/style.css">
-    <link rel="stylesheet" href="简借贷款_files/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="files/style.css">
+    <link rel="stylesheet" href="files/swiper-3.3.1.min.css">
     <script>
         window.onresize = function() {
             getscreen();
@@ -50,6 +41,21 @@
 </head>
 
 <body style="">
+	<!--<div class="search">
+		<div class="input_search">
+			<input type="text" name="" id="search_focus" value="" placeholder="搜索贷款/关键字"/>
+		</div>
+		<div class="cancel">
+			取消
+		</div>
+	</div>
+	<ul class="search-list">
+		<li>放款快</li>
+		<li>小额贷</li>
+		<li>工薪贷</li>
+		<li>芝麻分贷</li>
+		<li>电商贷</li>
+	</ul>-->
     <div class="loan_index">
         <div class="swiper-container swiper-container-horizontal">
             <div class="swiper-wrapper">
@@ -65,25 +71,25 @@
         <ul class="list_classfiy">
             <li cid="15" money="1000">
                 <div class="index_img_box">
-                    <img src="./简借贷款_files/e4aec8ac16c97e9aee60fbf03abb1c68.png" height="50">
+                    <img src="./files/e4aec8ac16c97e9aee60fbf03abb1c68.png" height="50">
                 </div>
                 <p>极速贷</p>
             </li>
             <li cid="12" money="3000">
                 <div class="index_img_box">
-                    <img src="./简借贷款_files/b9a162b7a1d8614a535db3e89aee03e7.png" height="50">
+                    <img src="./files/b9a162b7a1d8614a535db3e89aee03e7.png" height="50">
                 </div>
                 <p>工薪贷</p>
             </li>
             <li cid="14" money="5000">
                 <div class="index_img_box">
-                    <img src="./简借贷款_files/41ee0d133c46820e9d9732f7ac3598f4.png" height="50">
+                    <img src="./files/41ee0d133c46820e9d9732f7ac3598f4.png" height="50">
                 </div>
                 <p>大额贷</p>
             </li>
             <li cid="13" money="1000">
                 <div class="index_img_box">
-                    <img src="./简借贷款_files/284466d883525303d56c25e823b46eda.png" height="50">
+                    <img src="./files/284466d883525303d56c25e823b46eda.png" height="50">
                 </div>
                 <p>新口子</p>
             </li>
@@ -136,39 +142,37 @@
             </a>
         </div>
 </footer>
-<script>
-    var judgeSign = "index/index";
-</script>
-    <script src="简借贷款_files/jweixin-1.0.0.js" type="text/javascript"></script>
-    <script type="text/javascript" src="简借贷款_files/jquery-1.11.0.js"></script>
-    <script src="简借贷款_files/swiper-3.3.1.min.js"></script>
-    <script type="text/javascript" src="./简借贷款_files/POP_g.js"></script>
+    <script src="./files/jweixin-1.0.0.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./files/jquery-1.11.0.js"></script>
+    <script src="./files/swiper-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./files/POP_g.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
-    <!--<script type="text/javascript" src="简借贷款_files/main.js"></script>-->
+    <!--<script type="text/javascript" src="files/main.js"></script>-->
     <script type="text/javascript">
       //banner开始
       	let info;//公告信息
-//      $.ajax({
-//      	type:"get",
-//      	datatype:"json",
-//      	async:false,
-//      	url:host+"userDiversion/banner",
-//      	success:function(res){
-//				let swiperWrapper=$(".swiper-wrapper");
-//				let banner=res.data.banner;
-//				info=res.data.info;
-//				$(banner).each(function(index){
-//					let val=banner[index];
-//					let oDiv=$('<div class="swiper-slide">'+
-//	                    '<a tit="'+val.url+'">'+
-//	                        '<img src="'+val.value+'">'+
-//	                    '</a>'+
-//            	 ' </div>');
-//					swiperWrapper.append(oDiv)
-//				})
-//      	}
-//      })
+      	
+        $.ajax({
+        	type:"get",
+        	datatype:"json",
+        	async:false,
+        	url:host+"userDiversion/banner",
+        	success:function(res){
+				let swiperWrapper=$(".swiper-wrapper");
+				let banner=res.data.banner;
+				info=res.data.info;
+				$(banner).each(function(index){
+					let val=banner[index];
+					let oDiv=$('<div class="swiper-slide">'+
+	                    '<a tit="'+val.url+'">'+
+	                        '<img src="'+val.value+'">'+
+	                    '</a>'+
+              	 ' </div>');
+					swiperWrapper.append(oDiv)
+				})
+        	}
+        })
          var mySwiper = new Swiper('.swiper-container', {
             loop: true,
             autoplay: 3000,
@@ -176,62 +180,63 @@
       //banner结束
        
        //公告开始
-//     let announce=$(".announce");
-//   	$(info).each(function(index){
-//   		let val=info[index];
-//   		let $li=$('<li>'+val+'</li>');
-//   		announce.append($li);
-//   	})
+       let announce=$(".announce");
+     	$(info).each(function(index){
+     		let val=info[index];
+     		let $li=$('<li>'+val+'</li>');
+     		announce.append($li);
+     	})
        //公告结束
        
        //首页初始化
         loan_index.init();
-        
+        var mobilePhone=sessionStorage.getItem("mobilePhone");
         //首页  贷款列表  开始
        var data={
-        	page:1
+        	page:1,
        }
-//      $.ajax({
-//      	type:"post",
-//      	async:false,
-//      	dataType:"json",
-//      	contentType: "application/json; charset=UTF-8",
-//      	data:JSON.stringify(data),
-//      	url:host+"userDiversion/home",
-//      	success:function(res){
-//      		console.log(res)
-//      		let mode_list=$(".mode_list");
-//      		let list=res.data.list;
-//      		$(list).each(function(index){
-//      			let val=list[index];
-//      			let creditTypeId=val.creditTypeId;
-//      			let creditType='';
-//      			if(creditTypeId == 0){
-//      				creditType="所有贷款类型"
-//      			}
-//      			if(creditTypeId == 1){
-//      				creditType="小额极速贷"
-//      			}
-//      			let $li=$('<li>'+
-//                              '<a href="'+val.url+'">'+
-//                                 '<img src="'+val.picPath+'">'+
-//                                 '<div class="index_content_r">'+
-//                                      '<p>'+val.title+'</p>'+
-//                                      '<p>'+'<span class="sp2">'+val.creditInterestRate+'<span>/月</span></span>'+'</p>'+
-//                                      '<p>'+
-//                                      '<span class="sp1">'+creditType+'</span>'+
-//                                     '<i>'+'</i>'+val.creditLendSpeed+
-//                                          '<span class="sp2">可贷<span>'+val.ed+'</span>'+
-//                                      '</p>'+
-//                                 		 '<p class="sologan">'+val.slogan+
-//                                 		 '</p>'+
-//                                  '</div>'+
-//                              '</a>'+
-//                          '</li>')
-//      			mode_list.append($li)
-//      		});
-//      	}
-//      })
+       var uid=sessionStorage.getItem("uid");  //用户ID
+       console.log(uid)
+        $.ajax({
+        	type:"post",
+        	async:false,
+        	dataType:"json",
+        	contentType: "application/json; charset=UTF-8",
+        	data:JSON.stringify(data),
+        	url:host+"userDiversion/home",
+        	success:function(res){
+        		let mode_list=$(".mode_list");
+        		let list=res.data.list;
+        		$(list).each(function(index){
+        			let val=list[index];
+        			let creditTypeId=val.creditTypeId;
+        			let creditType='';
+        			if(creditTypeId == 0){
+        				creditType="所有贷款类型"
+        			}
+        			if(creditTypeId == 1){
+        				creditType="小额极速贷"
+        			}
+        			let $li=$('<li>'+
+                                '<a href="'+val.url+"&uid="+uid+"&mobilePhone="+mobilePhone+'">'+
+                                   '<img src="'+val.picPath+'">'+
+                                   '<div class="index_content_r">'+
+                                        '<p>'+val.title+'</p>'+
+                                        '<p>'+'<span class="sp2">'+val.creditInterestRate+'<span>/月</span></span>'+'</p>'+
+                                        '<p>'+
+                                        '<span class="sp1">'+creditType+'</span>'+
+                                       '<i>'+'</i>'+val.creditLendSpeed+
+                                            '<span class="sp2">可贷<span>'+val.ed+'</span>'+
+                                        '</p>'+
+                                   		 '<p class="sologan">'+val.slogan+
+                                   		 '</p>'+
+                                    '</div>'+
+                                '</a>'+
+                            '</li>')
+        			mode_list.append($li)
+        		});
+        	}
+        })
         //首页  贷款列表  结束
 
 		//底部tab导航
@@ -242,13 +247,32 @@
 		})
 		//进入“贷款大全” 页面
 		$(".loan").find("a").click(function(){
-			window.location.href="web.html"
+			window.location.href="loanlist.html"
 		})
 		
 		//进入“我的” 页面
 		$(".user").find("a").click(function(){
 			window.location.href="userinfo.html"
-		})
+		});
+		//搜索获得焦点事件
+//		$("#search_focus").focus(function(){
+//			console.log(1)
+//			$(".cancel").show();
+//			$(".search-list").show();
+//			$(".loan_index").hide();
+//			$("footer").hide();
+//		});
+		//点击取消隐藏搜索列表
+//		$(".cancel").click(function(){
+//			$(this).hide();
+//			$(".search-list").hide();
+//			$(".loan_index").show();
+//			$("footer").show();
+//		})
+		//点击搜索详情
+//		$(".search-list li").click(function(){
+//			window.location.href="loanlist.html"
+//		})
         wx.config({
             debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
             appId: "wx9fd127dae61b750f", // 必填，公众号的唯一标识
@@ -310,10 +334,9 @@
         wx.error(function(res) {
             //				  alert(res.errMsg);  
         });
-//      $('.list_classfiy li').on('click', function() {
-//          console.log($(this).index());
-//          var index = $(this).index();
-//      });
+        $('.list_classfiy li').on('click', function() {
+            window.location.href="loanlist.html"
+        });
     </script>
 </body>
 </html>

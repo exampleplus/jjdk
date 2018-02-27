@@ -1009,7 +1009,7 @@ footer.focus3>div.focus span {
 .capacity .sort>div:nth-of-type(2),
 .capacity .sort>div:nth-of-type(3),
 .capacity .sort>div:nth-of-type(4) {
-    width: 27%;
+    width: 32%;
     float: left;
     box-sizing: border-box;
     padding: 13px 0;
@@ -1088,7 +1088,7 @@ footer.focus3>div.focus span {
 }
 .capacity .sort ._show {
     position: absolute;
-    top: 86px;
+    top: 40px;
     right: 0;
     left: 0;
     bottom: 0;
@@ -1259,7 +1259,7 @@ footer.focus3>div.focus span {
 }
 .capacity #wrapper {
     position: absolute;
-    top: 90px;
+    top: 70px;
     bottom: 0;
     overflow: hidden;
     width: 100%;
@@ -4010,4 +4010,48 @@ ul.myMsg .coverLogo {
 }
 .b_2 {
     border-right: 1px solid #cacaca;
+}
+
+/*首页搜索*/
+.search{
+	overflow: hidden;
+	width: 100%;
+	padding: 5px 10px;
+	text-align: center;
+}
+.input_search{
+	float: left;
+	width: 80%;
+}
+
+.input_search input{
+	width: 100%;
+	padding: 3px 30px;
+	border-radius: 10px;
+}
+.cancel{
+	display: none;
+	float: left;
+	margin-left: 16px;
+	padding-top: 4px;
+	font-size: 16px;
+	color: #666;
+	
+}
+.search-list{
+	display: none;
+	width: 100%;
+	padding: 5px 10px;
+}
+.search-list li{
+	width: 20%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	display: inline-block;
+	color: #666;
+	padding: 3px 10px;
+	margin: 5px;
+	border:1px solid #666;
+	border-radius: 3px;
 }

@@ -1,0 +1,94 @@
+.user_con{
+	width:100%;
+	margin-top:0;
+}
+.user_top{
+	clear: both;
+    padding: 0.4rem 0;
+    background: url(../img/bbb.png) no-repeat center center;
+    background-size: cover;
+    margin: 0 0 10px 0;
+    position: relative;
+    z-index: 999;
+}
+.user_top .left{
+	margin: 10px 0;
+    text-align: center;
+}
+.user_top .left img {
+    width: 3rem !important;
+    height: 3rem !important;
+    border-radius: 100px;
+    background: #fff;
+    border: 1px solid #fff;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px #0052d9;
+}
+.user_top .right{
+	font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+.user_list a {
+    display: block;
+    line-height: 2.4rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.7rem;
+    color: #606060;
+    padding-left: 2.4rem;
+    position: relative;
+    background: #fff;
+}
+.user_list a.apply_lending{
+	background: #ec2b2b;
+    color: #fff;
+    border: 0;
+    border-radius: 45px;
+    margin: 3px auto;
+    width: 70%;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 0;
+    text-align: center;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 9px -3px #7e0000;
+}
+.lendRecord{
+	margin-top: 10px;
+    border-top: 1px solid #eee;
+}
+.user_list a.lendRecord:before {
+    content: "";
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: url(../img/tixian.png) no-repeat;
+    background-size: 100%;
+    top: 0.6rem;
+    left: 0.6rem;
+}
+.user_list a.lendRecord:after,.user_list a.logout:after{
+    content: "";
+    position: absolute;
+    right: 1rem;
+    width: 0.6rem;
+    height: .6rem;
+    background: url(../img/go.png) no-repeat;
+    background-size: 100%;
+    top: 0.9rem;
+}
+.logout{
+	border-top: 10px solid #f9f9f9;
+}
+.user_list a.logout:before {
+    content: "";
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: url(../img/tuichu.png) no-repeat;
+    background-size: 100%;
+    top: 0.6rem;
+    left: 0.6rem;
+}
