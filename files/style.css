@@ -2954,6 +2954,11 @@ footer.focus3>div.focus span {
     right: 0;
     margin: auto;
 }
+.sologan{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
 
 /*信用卡*/
 
@@ -2962,7 +2967,7 @@ footer.focus3>div.focus span {
     height: 100%;
 }
 .creditCard #wrapper {
-    /*max-width: 750px;*/
+    max-width: 750px;
     width: 100%;
     overflow: hidden;
     position: absolute;

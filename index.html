@@ -68,7 +68,7 @@
             	
             </ul>
         </div>
-        <ul class="list_classfiy">
+        <!--<ul class="list_classfiy">
             <li cid="15" money="1000">
                 <div class="index_img_box">
                     <img src="./files/e4aec8ac16c97e9aee60fbf03abb1c68.png" height="50">
@@ -93,7 +93,7 @@
                 </div>
                 <p>新口子</p>
             </li>
-        </ul>
+        </ul>-->
         <div style="display: none;">
             <label class="borrowNum">
 				<input type="tel" placeholder="请输入借款金额(元)" value="">
@@ -211,13 +211,6 @@
         		$(list).each(function(index){
         			let val=list[index];
         			let creditTypeId=val.creditTypeId;
-        			let creditType='';
-        			if(creditTypeId == 0){
-        				creditType="所有贷款类型"
-        			}
-        			if(creditTypeId == 1){
-        				creditType="小额极速贷"
-        			}
         			let $li=$('<li>'+
                                 '<a href="'+val.url+"&uid="+uid+"&mobilePhone="+mobilePhone+'">'+
                                    '<img src="'+val.picPath+'">'+
@@ -225,7 +218,7 @@
                                         '<p>'+val.title+'</p>'+
                                         '<p>'+'<span class="sp2">'+val.creditInterestRate+'<span>/月</span></span>'+'</p>'+
                                         '<p>'+
-                                        '<span class="sp1">'+creditType+'</span>'+
+                                        '<span class="sp1">'+"下款时间"+'</span>'+
                                        '<i>'+'</i>'+val.creditLendSpeed+
                                             '<span class="sp2">可贷<span>'+val.ed+'</span>'+
                                         '</p>'+

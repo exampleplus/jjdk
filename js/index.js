@@ -75,7 +75,7 @@ function upajax(){
                                 '<p>'+val.title+'</p>'+
                                 '<p>'+'<span class="sp2">'+val.creditInterestRate+'<span>/月</span></span>'+'</p>'+
                                 '<p>'+
-                                '<span class="sp1">'+creditType+'</span>'+
+                                '<span class="sp1">'+"下款时间"+'</span>'+
                                '<i>'+'</i>'+val.creditLendSpeed+
                                     '<span class="sp2">可贷<span>'+val.ed+'</span>'+
                                 '</p>'+
