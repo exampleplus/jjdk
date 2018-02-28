@@ -166,7 +166,7 @@
 		  })
 	})
 				//登录
-				var phone;
+				var uid=""
 				$(".login_go").click(function(){
 					var phone=$("#phone").val();
 					var pwd=$("#password").val();
@@ -178,7 +178,6 @@
 					var url1=host_login+"wechatLogin/user/login_account?phone="+phone+"&password="+hash;
 					var url2=host_login+"wechatLogin/user/login_code?phone="+phone+"&code="+code;
 					var url3;
-					
 				if(!checkVar(phone)){
 				 	cont.text('*请输入手机号').show().delay(2000).fadeOut();
 				 	return;
@@ -201,21 +200,18 @@
 					success:function(res){
 						console.log(res)
 						if(res.code==0){
-							var uid=res.data.uid;
+							uid=res.data.uid;
+							console.log(uid)
 							var token=res.data.token;
 							var mobilePhone=res.data.mobilePhone;
-							console.log(mobilePhone);
 							sessionStorage.setItem("uid",uid);
 							sessionStorage.setItem("token",token);
-							sessionStorage.setItem('phone',phone);
 							sessionStorage.setItem('mobilePhone',mobilePhone);
 							$(".login").css("display","none");
 							$(".user_con").css("display","block");
-							phone=sessionStorage.getItem("phone");
-//							console.log(phone)
+							mobilePhone=sessionStorage.getItem("mobilePhone");
 							$(".right").html("")
-							$(".right").text(phone)
-//							window.location.href="index.html"
+							$(".right").text(mobilePhone)
 						}else{
 							alert(res.message)
 						}
@@ -225,10 +221,10 @@
 					}
 				});
 			})
-			var  uid=sessionStorage.getItem("uid");
-//			$(".right").html("")
-			phone=sessionStorage.getItem("phone");
-			$(".right").text(phone)
+			uid=sessionStorage.getItem("uid");
+			console.log(uid)
+			mobilePhone=sessionStorage.getItem("mobilePhone");
+			$(".right").text(mobilePhone)
 			if(!uid){
 				$(".login").css("display","block");
 				$(".user_con").css("display","none");
@@ -246,6 +242,7 @@
 					sessionStorage.removeItem("uid");
 					sessionStorage.removeItem("token");
 					sessionStorage.removeItem("phone");
+					sessionStorage.removeItem("mobilePhone");
 					window.location.href="index.html"
 				})
 	})
