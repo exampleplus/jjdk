@@ -27,9 +27,7 @@
 			var times=60;
 			var timer=null;
 			var val=$("#hide").val();
-			var url1=host_login+"act/light-loan-lyb/registerCode2/"+phone+"/"+imgcode+"?RCaptchaKey="+val;
-//			var url1=host+"act/light-loan-lyb/registerCode2/"+{phone}+"/"+{imgcode}+"?RCaptchaKey="+val;
-			
+			var url1=host_login+"guanjia_api/act/light-loan-lyb/registerCode2/"+phone+"/"+imgcode+"?RCaptchaKey="+val;
 			if(!checkVar(phone)){
 		 	cont.text('*请输入手机号').show().delay(2000).fadeOut();
 		 	return;
@@ -120,7 +118,7 @@
 			$.ajax({
 				type:"post",
 				async:true,
-				url:host_login+"act/light-loan-lyb/register3?phone="+phone+"&password="+hash+"&code="+code,
+				url:host_login+"guanjia_api/act/light-loan-lyb/register3?phone="+phone+"&password="+hash+"&code="+code,
 				success:function(res){
 					console.log(res);
 					if(res.code==0){

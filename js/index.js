@@ -2,7 +2,7 @@
 var loan_index = {
 	init:function(){
 		this.rolling();//公告滚动
-		this.fn();
+//		this.fn();
 	},
 	//公告滚动
 	rolling:function (){
@@ -23,14 +23,14 @@ var loan_index = {
 	  		}
 	  	},3000)
 	},
-	fn:function(){
-		$('a[tit]').click(function(){
-			window.location.href= $(this).attr('tit');
-		})
-	}
+//	fn:function(){
+//		$('a[tit]').click(function(){
+//			window.location.href= $(this).attr('tit');
+//		})
+//	}
 };
 //贷款大全
-	var uid=sessionStorage.getItem("uid");
+	  var uid="";
 	  var mobilePhone=sessionStorage.getItem("mobilePhone");
 	var money="";
 	var creditType=0;
@@ -55,6 +55,7 @@ function upajax(){
 		url:host+"userDiversion/home",
 		success:function(res){
 			console.log(data)
+			uid=sessionStorage.getItem("uid");
 			morelist.html("")
 			let list=res.data.list;
 			$(list).each(function(index){

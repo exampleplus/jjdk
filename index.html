@@ -165,7 +165,7 @@
 				$(banner).each(function(index){
 					let val=banner[index];
 					let oDiv=$('<div class="swiper-slide">'+
-	                    '<a tit="'+val.url+'">'+
+	                    '<a tit="'+val.url+'" href="javascript:;">'+
 	                        '<img src="'+val.value+'">'+
 	                    '</a>'+
               	 ' </div>');
@@ -195,7 +195,7 @@
        var data={
         	page:1,
        }
-       var uid=sessionStorage.getItem("uid");  //用户ID
+       var uid = '';
        console.log(uid)
         $.ajax({
         	type:"post",
@@ -205,6 +205,7 @@
         	data:JSON.stringify(data),
         	url:host+"userDiversion/home",
         	success:function(res){
+        		 uid=sessionStorage.getItem("uid");
         		let mode_list=$(".mode_list");
         		let list=res.data.list;
         		$(list).each(function(index){

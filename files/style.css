@@ -575,13 +575,13 @@ textarea {
     position: static;
 }
 .loan_index .capacity #wrapper ul li:nth-of-type(1):before {
-    background: #fff;
+    /*background: #fff;*/
 }
 .loan_index .capacity #wrapper ul li:nth-of-type(2):before {
-    background: #fff;
+    /*background: #fff;*/
 }
 .loan_index .capacity #wrapper ul li:nth-of-type(3):before {
-    background: #fff;
+    /*background: #fff;*/
 }
 .loan_index .index_search {
     width: 100%;
@@ -2962,7 +2962,7 @@ footer.focus3>div.focus span {
     height: 100%;
 }
 .creditCard #wrapper {
-    max-width: 750px;
+    /*max-width: 750px;*/
     width: 100%;
     overflow: hidden;
     position: absolute;
