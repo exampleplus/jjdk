@@ -54,7 +54,6 @@ function upajax(){
         	data:JSON.stringify(data),
 		url:host+"userDiversion/home",
 		success:function(res){
-			console.log(data)
 			uid=sessionStorage.getItem("uid");
 			morelist.html("")
 			let list=res.data.list;

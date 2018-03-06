@@ -148,11 +148,9 @@
     <script type="text/javascript" src="./files/POP_g.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
-    <!--<script type="text/javascript" src="files/main.js"></script>-->
     <script type="text/javascript">
       //banner开始
       	let info;//公告信息
-      	
         $.ajax({
         	type:"get",
         	datatype:"json",
@@ -171,7 +169,7 @@
               	 ' </div>');
 					swiperWrapper.append(oDiv)
 				})
-        	}
+        	},
         })
          var mySwiper = new Swiper('.swiper-container', {
             loop: true,
@@ -190,13 +188,35 @@
        
        //首页初始化
         loan_index.init();
-        var mobilePhone=sessionStorage.getItem("mobilePhone");
+//      var mobilePhone=sessionStorage.getItem("mobilePhone");
         //首页  贷款列表  开始
        var data={
         	page:1,
        }
        var uid = '';
-       console.log(uid)
+       var mobilePhone="";
+      	function GetRequest(){  
+			   var url = location.search; //获取url中"?"符后的字串  
+			   var theRequest = new Object();  
+			   if (url.indexOf("?") != -1) {  
+			      var str = url.substr(1);  
+			      strs = str.split("&"); 
+			      for(var i = 0; i < strs.length; i ++) {  
+			         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+			      }
+			   }  
+			   return theRequest;  
+			}
+      	
+      	if(sessionStorage.getItem("uid") != "undefined" && sessionStorage.getItem('uid') != null){
+      		
+      	}else{
+      		var req=GetRequest();
+      		uid=req.uid;
+      		mobilePhone=req.mobilePhone;
+      		sessionStorage.setItem("uid", uid);
+      		sessionStorage.setItem("mobilePhone",mobilePhone);
+      	}
         $.ajax({
         	type:"post",
         	async:false,
@@ -205,10 +225,11 @@
         	data:JSON.stringify(data),
         	url:host+"userDiversion/home",
         	success:function(res){
-        		 uid=sessionStorage.getItem("uid");
         		let mode_list=$(".mode_list");
         		let list=res.data.list;
         		$(list).each(function(index){
+    			   	let uid=sessionStorage.getItem("uid");
+    			   	let mobilePhone=sessionStorage.getItem("mobilePhone");
         			let val=list[index];
         			let creditTypeId=val.creditTypeId;
         			let $li=$('<li>'+
@@ -328,9 +349,9 @@
         wx.error(function(res) {
             //				  alert(res.errMsg);  
         });
-        $('.list_classfiy li').on('click', function() {
-            window.location.href="loanlist.html"
-        });
+//      $('.list_classfiy li').on('click', function() {
+//          window.location.href="loanlist.html"
+//      });
     </script>
 </body>
 </html>

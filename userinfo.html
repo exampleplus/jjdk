@@ -38,12 +38,11 @@
 				<div class="account"> 
 					<input class="account_text" id="phone" type="text" name="phone" placeholder="请输入您的账号">
 				</div>
-				<div class="passwordbox" id="password_login">
+				<div class="passwordbox none" id="password_login">
 					<input type="password" class="password" id="password" name="password" placeholder="请输入您的密码"> 
 				</div>
-				<div class="passwordbox yzm_input none" id="dx">
+				<div class="passwordbox yzm_input" id="dx">
 					<input type="text" name="code" class="code" id="code" value="" placeholder="请输入手机验证码"/>
-					<!--<a href="javascript:;" id="on_yzm">获取验证码</a>-->
 					<input type="button" name="on_yzm" id="on_yzm" value="获取验证码" />
 				</div>
 				<p id="cont"></p>
@@ -54,8 +53,7 @@
 				<div class="login_account">
 					账号密码登录
 				</div>
-				<!--<a href="javascript:;" class="login_code log_pw"></a>
-				<a href="javascript:;" class="login_account log_pw">账号密码登录</a>-->
+				
 				<div class="login_btn"> 
 					<button class="login_go">登录</button> 
 					<a href="register.html">没有账号,前往注册</a> 
@@ -90,15 +88,6 @@
 		<script src="js/md5.js"></script>
 		<script>
 		
-			//进入"首页"” 页面
-			$(".index").click(function(){
-				window.location.href="index.html"
-			})
-			//进入“贷款大全” 页面
-			$(".loan").find("a").click(function(){
-				window.location.href="loanlist.html"
-			})
-			
 			$(function(){
 				var login_code=$(".login_code");//验证码
 				var login_account=$(".login_account");//账号密码
@@ -167,6 +156,7 @@
 	})
 				//登录
 				var uid=""
+				var mobliePhone="";
 				$(".login_go").click(function(){
 					var phone=$("#phone").val();
 					var pwd=$("#password").val();
@@ -201,7 +191,6 @@
 						console.log(res)
 						if(res.code==0){
 							uid=res.data.uid;
-							console.log(uid)
 							var token=res.data.token;
 							var mobilePhone=res.data.mobilePhone;
 							sessionStorage.setItem("uid",uid);
@@ -211,7 +200,7 @@
 							$(".user_con").css("display","block");
 							mobilePhone=sessionStorage.getItem("mobilePhone");
 							$(".right").html("")
-							$(".right").text(mobilePhone)
+							$(".right").text(mobilePhone);
 						}else{
 							alert(res.message)
 						}
@@ -222,9 +211,6 @@
 				});
 			})
 			uid=sessionStorage.getItem("uid");
-			console.log(uid)
-			mobilePhone=sessionStorage.getItem("mobilePhone");
-			$(".right").text(mobilePhone)
 			if(!uid){
 				$(".login").css("display","block");
 				$(".user_con").css("display","none");
@@ -232,7 +218,8 @@
 				$(".login").css("display","none");
 				$(".user_con").css("display","block");
 			}
-				
+				mobilePhone=sessionStorage.getItem("mobilePhone");
+				$(".right").text(mobilePhone)
 				//立即申请借款
 				$(".apply_lending").click(function(){
 					window.location.href="index.html"
@@ -245,6 +232,20 @@
 					sessionStorage.removeItem("mobilePhone");
 					window.location.href="index.html"
 				})
+				
+				//进入"首页"” 页面
+				$(".index").click(function(){
+					var uid=sessionStorage.getItem("uid");
+					var mobilePhone=sessionStorage.getItem("mobilePhone");
+					console.log(uid)
+					window.location.href="index.html"
+
+				})
+				//进入“贷款大全” 页面
+				$(".loan").find("a").click(function(){
+					window.location.href="loanlist.html"
+				})
+			
 	})
 		</script>
 	</body>
