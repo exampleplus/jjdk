@@ -1,30 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0041)http://new.zljianjie.com/Index/index.html -->
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>首页</title>
-    <script>
-(function(){
-    if (typeof(WeixinJSBridge) == "undefined") {
-        document.addEventListener("WeixinJSBridgeReady", function (e) {
-            setTimeout(function(){
-                WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {
-                });
-            },0);
-        });
-    } else {
-        setTimeout(function(){
-            WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {
-            });
-        },0);
-    }
-})();
-</script>	
     <link rel="stylesheet" href="css/information.css" />
     <link rel="stylesheet" type="text/css" href="files/style.css">
     <link rel="stylesheet" href="files/swiper-3.3.1.min.css">
@@ -41,21 +22,6 @@
 </head>
 
 <body style="">
-	<!--<div class="search">
-		<div class="input_search">
-			<input type="text" name="" id="search_focus" value="" placeholder="搜索贷款/关键字"/>
-		</div>
-		<div class="cancel">
-			取消
-		</div>
-	</div>
-	<ul class="search-list">
-		<li>放款快</li>
-		<li>小额贷</li>
-		<li>工薪贷</li>
-		<li>芝麻分贷</li>
-		<li>电商贷</li>
-	</ul>-->
     <div class="loan_index">
         <div class="swiper-container swiper-container-horizontal">
             <div class="swiper-wrapper">
@@ -116,39 +82,35 @@
     </div>
 
     <div class="footer"></div>
-<!-- 三套样式  footer.focus1原有默认    focus2    focus3夏日 -->
-<footer class="focus2">
-
-    <style>
-        footer>div span {
-            font-size: 10px;
-        }
-    </style>
-    	<div class="focus index">
-            <i></i>
-            <span>首页</span>
-        </div>
-        
-        <div class="loan">
-            <a href="javascript:;">
-                <i></i>
-                <span>贷款大全</span>
-            </a>
-        </div>
-        <div class="user">
-            <a href="javascript:;" title="userInfo.html">
-                <i></i>
-                <span>我的</span>
-            </a>
-        </div>
-</footer>
-    <script src="./files/jweixin-1.0.0.js" type="text/javascript"></script>
-    <script type="text/javascript" src="./files/jquery-1.11.0.js"></script>
+			<footer class="focus2">
+		    <style>
+		        footer>div span {
+		            font-size: 10px;
+		        }
+		    </style>
+		    	<div class="focus index">
+		            <i></i>
+		            <span>首页</span>
+		        </div>
+		        
+		        <div class="loan">
+		            <a href="javascript:;">
+		                <i></i>
+		                <span>贷款大全</span>
+		            </a>
+		        </div>
+		        <div class="user">
+		            <a href="javascript:;" title="userInfo.html">
+		                <i></i>
+		                <span>我的</span>
+		            </a>
+		        </div>
+		</footer>
+    <script src="./files/jquery-1.11.0.js"></script>
     <script src="./files/swiper-3.3.1.min.js"></script>
-    <script type="text/javascript" src="./files/POP_g.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
-    <script type="text/javascript">
+    <script>
       //banner开始
       	let info;//公告信息
         $.ajax({
@@ -254,7 +216,6 @@
         })
         //首页  贷款列表  结束
 
-		//底部tab导航
 		
 		//进入"首页"” 页面
 		$(".index").click(function(){
@@ -269,89 +230,7 @@
 		$(".user").find("a").click(function(){
 			window.location.href="userinfo.html"
 		});
-		//搜索获得焦点事件
-//		$("#search_focus").focus(function(){
-//			console.log(1)
-//			$(".cancel").show();
-//			$(".search-list").show();
-//			$(".loan_index").hide();
-//			$("footer").hide();
-//		});
-		//点击取消隐藏搜索列表
-//		$(".cancel").click(function(){
-//			$(this).hide();
-//			$(".search-list").hide();
-//			$(".loan_index").show();
-//			$("footer").show();
-//		})
-		//点击搜索详情
-//		$(".search-list li").click(function(){
-//			window.location.href="loanlist.html"
-//		})
-        wx.config({
-            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-            appId: "wx9fd127dae61b750f", // 必填，公众号的唯一标识
-            timestamp: "1519609639",
-            nonceStr: "Io33jGU0812vOtZK4duuN9bpmaNTPRih",
-            signature: "26e01679d25c34899ac61ef6406599f4c59a6b45",
-            jsApiList: [
-                // 所有要调用的 API 都要加到这个列表中
-                'getLocation',
-            ]
-        });
-        wx.ready(function() {
-            //获取当前地理位置  
-            if (!sessionStorage.get_city) {
-                wx.getLocation({
-                    success: function(res) {
-                        var len = (res.longitude - 0).toFixed(6);
-                        var lat = (res.latitude - 0).toFixed(6);
-                        $.ajax({
-                            url: "http://restapi.amap.com/v3/assistant/coordinate/convert",
-                            dataType: 'jsonp',
-                            type: 'get',
-                            data: {
-                                key: '09b9d0968aa5e656b68dcd1ea462b537',
-                                locations: len + ',' + lat,
-                                coordsys: 'gps',
-                                output: 'JSON'
-                            },
-                            jsonp: 'callback',
-                            success: function(result) {
-                                $.ajax({
-                                    url: "http://restapi.amap.com/v3/geocode/regeo",
-                                    dataType: 'jsonp',
-                                    type: 'get',
-                                    data: {
-                                        key: '09b9d0968aa5e656b68dcd1ea462b537',
-                                        location: result.locations,
-                                        output: 'JSON'
-                                    },
-                                    jsonp: 'callback',
-                                    success: function(result1) {
-                                        //   alert(result1.regeocode.formatted_address);
-                                        //   alert(result1.regeocode.addressComponent.province);
-                                        // console.log(result1.regeocode.addressComponent.province)
-                                        sessionStorage.get_city = result1.regeocode.addressComponent.province;
-                                    },
-                                    timeout: 3000
-                                });
-                            },
-                            timeout: 3000
-                        });
-                    },
-                    cancel: function(res) {
-                        alert('您拒绝授权获取地理位置');
-                    }
-                });
-            }
-        });
-        wx.error(function(res) {
-            //				  alert(res.errMsg);  
-        });
-//      $('.list_classfiy li').on('click', function() {
-//          window.location.href="loanlist.html"
-//      });
+
     </script>
 </body>
 </html>

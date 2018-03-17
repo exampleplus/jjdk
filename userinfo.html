@@ -7,7 +7,7 @@
 	    <meta name="format-detection" content="telephone=no">
 	    <title>个人中心</title>
 	     <link rel="stylesheet" href="css/information.css" />
-   		 <link rel="stylesheet" type="text/css" href="files/style.css">
+   		 <link rel="stylesheet" href="files/style.css">
    		 <link rel="stylesheet" href="css/basic.css" />
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/font.css" />
@@ -82,8 +82,7 @@
 		            </a>
 		        </div>
 		</footer>
-		 <script type="text/javascript" src="files/jquery-1.11.0.js"></script>
-	    <script type="text/javascript" src="./files/POP_g.js"></script>
+		<script type="text/javascript" src="files/jquery-1.11.0.js"></script>
 	    <script src="js/common.js"></script>
 		<script src="js/md5.js"></script>
 		<script>
@@ -211,7 +210,7 @@
 				});
 			})
 			uid=sessionStorage.getItem("uid");
-			if(!uid){
+			if(uid === "undefined" || uid === null || uid === ""){
 				$(".login").css("display","block");
 				$(".user_con").css("display","none");
 			}else{
@@ -237,7 +236,6 @@
 				$(".index").click(function(){
 					var uid=sessionStorage.getItem("uid");
 					var mobilePhone=sessionStorage.getItem("mobilePhone");
-					console.log(uid)
 					window.location.href="index.html"
 
 				})

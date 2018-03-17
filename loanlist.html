@@ -7,23 +7,6 @@
 	    <meta name="apple-mobile-web-app-capable" content="yes">
 	    <meta name="format-detection" content="telephone=no">
 		<title>贷款大全</title>
-		<script>
-			(function(){
-			    if (typeof(WeixinJSBridge) == "undefined") {
-			        document.addEventListener("WeixinJSBridgeReady", function (e) {
-			            setTimeout(function(){
-			                WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {
-			                });
-			            },0);
-			        });
-			    } else {
-			        setTimeout(function(){
-			            WeixinJSBridge.invoke('setFontSizeCallback',{"fontSize":0}, function(res) {
-			            });
-			        },0);
-			    }
-			})();
-		</script>	
 		<link rel="stylesheet" type="text/css" href="./files/style.css">
 		<script>
 			window.onresize = function(){
@@ -147,12 +130,8 @@
 			        </div>
 			</footer>
 		<script type="text/javascript" src="./files/jquery-1.11.0.js"></script>
-		<script type="text/javascript" src="js/iscroll.js"></script>
-		<script type="text/javascript" src="./files/POP_g.js"></script>
 		<script src="js/common.js"></script>
-		
 		<script type="text/javascript" src="js/index.js"></script>
-
 		<script>
 			intelligent.init();
 			//进入"首页"” 页面
